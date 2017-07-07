@@ -1,0 +1,14 @@
+<header class="header">
+	<div class="container">
+		<div class="header-return" [routerLink]="['/']">
+			<md-icon>navigate_before</md-icon>
+		</div>
+		<div class="header-title">{{ date | amDateFormat:'MMMM YYYY'}}</div>
+		<div class="header-menu" [routerLink]="['/']">
+			<md-icon>more_horiz</md-icon>
+		</div>
+	</div>
+</header>
+<main>
+	<router-outlet></router-outlet>
+</main>

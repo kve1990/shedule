@@ -1,0 +1,78 @@
+.calendar{
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 2.8rem;
+
+	@media screen and (min-width: 600px){
+		margin-top: 2rem;
+		width: 50rem;
+		border: 1px solid #f5f5f5;
+		box-shadow: 1px 1px 0 0 rgba(0,0,0,.05);
+	}
+
+	&-day{
+		padding-top: 5vw;
+		width: calc(100% / 7);
+		height: calc(100vw / 7);
+		text-align: center;
+		border: 1px solid #f5f5f5;
+		color: #B2B1BE;
+		font-weight: bold;
+		font-size: 4vw;
+
+		@media screen and (min-width: 600px){
+			padding-top: 2rem;
+			font-size: 1.6rem;
+			height: 6rem;
+		}
+
+		&:nth-child(7n-6){
+			border-left: none;
+		}
+
+		&:nth-child(7n){
+			border-right: none;
+		}
+
+		&__header{
+			padding-top: 1.7rem;
+			border: none;
+			height: 4.3rem;
+			font-size: 1.1rem;
+		}
+
+		&__header, &__outside{
+			font-weight: normal;
+		}
+
+		&__events{
+			height: 6px;
+			width: 50%;
+			margin: 0 25%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			
+			span{
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				background: #9B28B0;
+			}
+		}
+
+		&.active{
+			background-color: #f5f5f5;
+		}
+
+		&.day{
+			cursor: pointer;
+			color: #5E616A;
+			transition: all ease-in-out .2s;
+
+			&:hover{
+				background-color: #f5f5f5;
+			}
+		}
+	}
+}

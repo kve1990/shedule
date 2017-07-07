@@ -1,0 +1,134 @@
+.container{
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+
+	@media screen and (min-width: 600px){
+		justify-content: space-around;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+}
+.details{
+	padding: 0 1.5rem;
+	
+	@media screen and (min-width: 600px){
+		width: 50rem;
+	}
+
+	&-header{
+		margin-bottom: 2.5rem;
+	}
+}
+.card{
+	padding: 1rem 1.5rem;
+	background-color: #EDEDED;
+	border-radius: 10px;
+	margin-bottom: 1rem;
+
+	&-header{
+		color: #544681;
+		margin: .4rem 0 1.2rem 0;
+		font-size: 1.6rem;
+	}
+
+	&-info{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		align-items: flex-start;
+		color: #AAAAB6;
+		font-size: 1.1rem;
+		margin-bottom: 1.9rem;
+
+		.time{
+			width: 50%;
+		}
+
+		.time, .adress{
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		.material-icons{
+			height: 1.5rem;
+			width: 2rem;
+			font-size: 1.5rem;
+			margin-right: .1rem;
+		}
+	}
+
+	&-content{
+		color: #5D5F6B;
+		line-height: 130%;
+		font-size: 1.3rem;
+	}
+
+	&-feedback{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.want{
+	color: #544681;
+	font-size: 1.1rem;
+}
+.btn-group{
+	button{
+		border: none;
+		background-color: transparent;
+		outline: none;
+		color: #666;
+		transition: all ease-in-out .2s;
+		cursor: pointer;
+
+		&:hover{
+			color: #333;
+		}
+	}
+}
+.add{
+
+	&-button{
+		position: fixed;
+		bottom: 2rem;
+		left: calc(50% - 3rem);
+		width: 6rem;
+		height: 6rem;
+		border-radius: 50%;
+		background-color: #544681;
+		bottom: 2rem;
+		border: none;
+		outline: none;
+		color: #fff;
+	}
+
+	&-menu{
+		background-color: #fff;
+		width: 30rem;
+		position: fixed;
+		right: calc(50% - 15rem);
+		bottom: -10rem;
+		z-index: 1000;
+		padding: 0;
+		border: 1px solid rgba(0,0,0,.03);
+		box-shadow: 2px 2px 1px 0 rgba(0,0,0,.15);
+		transition: all ease-in-out .3s;
+
+		&.active{
+			bottom: 1rem;
+		}
+
+		&-item{
+			font-size: 1.6rem;
+			cursor: pointer;
+			padding: 1rem 1.3rem;
+			transition: all ease-in-out .2s;
+			&:hover{
+				background-color: rgba(0,0,0,.1);
+			}
+		}
+	}
+}

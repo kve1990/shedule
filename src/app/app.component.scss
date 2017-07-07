@@ -1,0 +1,20 @@
+.header{
+	background: linear-gradient(90deg, #544681, #d20746);
+	color: #fff;
+	height: 7.1rem;
+
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-title{
+		font-size: 1.7rem;
+	}
+
+	&-return, &-menu{
+		cursor: pointer;
+		outline: none;
+	}
+}

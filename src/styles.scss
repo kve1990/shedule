@@ -1,0 +1,32 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+:root {
+  font-size: 62.5%;
+}
+html, body{
+  margin:0;
+  padding:0;
+  height: 100%;
+  min-height: 100vh;
+}
+body {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.4rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+}
+a{
+  color: inherit;
+}
+.container {
+    height: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 1.5rem; }

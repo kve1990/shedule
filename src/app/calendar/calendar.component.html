@@ -1,0 +1,23 @@
+<div class="calendar">
+	<div class="calendar-day calendar-day__header">Пн</div>
+	<div class="calendar-day calendar-day__header">Вт</div>
+	<div class="calendar-day calendar-day__header">Ср</div>
+	<div class="calendar-day calendar-day__header">Чт</div>
+	<div class="calendar-day calendar-day__header">Пт</div>
+	<div class="calendar-day calendar-day__header">Сб</div>
+	<div class="calendar-day calendar-day__header">Вс</div>
+
+	<div class="calendar-day calendar-day__outside" *ngFor="let item of firstDays">{{item}}</div>
+
+	<div class="calendar-day day"
+		 [class.active]="item.active"
+		 *ngFor="let item of currentDays;"
+		 (click)="getDetailsDay(item);">
+		<div>{{item.day}}</div>
+		<div class="calendar-day__events">
+			<span *ngFor="let event of item.events"></span>
+		</div>
+	</div>
+
+	<div class="calendar-day calendar-day__outside" *ngFor="let item of lastDays">{{item}}</div>
+</div>
