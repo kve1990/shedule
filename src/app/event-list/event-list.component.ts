@@ -26,6 +26,16 @@ moment.locale('ru-ru');
       transition('* => void', [
         animate(100, style({transform: 'translateX(-100px)'}))
       ])
+    ]),
+     trigger('fade', [
+      state('in', style({opacity: 1})),
+      transition('void => *', [
+        style({opacity: 0}),
+        animate(150)
+      ]),
+      transition('* => void', [
+        animate(80, style({opacity: 0}))
+      ])
     ])
   ]
 })

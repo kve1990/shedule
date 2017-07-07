@@ -1,5 +1,6 @@
-<div class="container">
+<div class="container"[@fade]>
 	<app-calendar (getEventsList)="handleEvents($event)" (click)="menuOpen = false"></app-calendar>
+
 	<div class="details" (click)="menuOpen = false">
 		<h3 class="details-header">Детали</h3>
 		<div class="card" *ngFor="let detail of details" [@flyInOut]>
